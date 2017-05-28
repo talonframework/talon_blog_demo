@@ -1,0 +1,36 @@
+.container-fluid
+  .row
+    .col-md-12
+      .box
+        .box-header.with-border
+          .box-title Posts
+        .box-body.table-responsive.no-padding
+          .panel_contents
+            table.table.table-hover
+              tbody
+                
+                  - {name, value} = Talon.View.talon_resource(@conn).get_schema_field(:show, @resource, :title)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = Talon.View.talon_resource(@conn).get_schema_field(:show, @resource, :body)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = Talon.View.talon_resource(@conn).get_schema_field(:show, @resource, :published)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = Talon.View.talon_resource(@conn).get_schema_field(:show, @resource, :views)
+                  tr
+                    th= name
+                    td= value
+                
+                  - {name, value} = Talon.View.talon_resource(@conn).get_schema_field(:show, @resource, :blog_id)
+                  tr
+                    th= name
+                    td= value
+                

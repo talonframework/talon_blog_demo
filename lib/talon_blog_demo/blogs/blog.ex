@@ -7,11 +7,11 @@ defmodule TalonBlogDemo.Blogs.Blog do
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "blogs_blogs" do
-    field :active, :boolean, default: true
-    field :description, :string
     field :name, :string
-    # field :user_id, :binary_id
+    field :description, :string
     belongs_to :user, TalonBlogDemo.Accounts.User
+    field :active, :boolean, default: true
+    # field :user_id, :binary_id
 
     timestamps()
   end

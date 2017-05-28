@@ -1,0 +1,38 @@
+.box-header.with-border
+  .box-title = Elixir.TalonBlogDemo.Talon.Accounts.User.form_card_title(@resource)
+= form_for @changeset, @action, [class: "form-horizontal"], fn f ->
+  .box-body
+    - a = {f, @talon}
+    
+      .form-group
+        = label f, :first_name, class: "col-sm-2 control-label"
+        .col-sm-10
+          = Talon.Form.input_builder a, :first_name, class: "form-control", place_holder: "first_name"
+          = error_tag f, :first_name
+    
+      .form-group
+        = label f, :last_name, class: "col-sm-2 control-label"
+        .col-sm-10
+          = Talon.Form.input_builder a, :last_name, class: "form-control", place_holder: "last_name"
+          = error_tag f, :last_name
+    
+      .form-group
+        = label f, :username, class: "col-sm-2 control-label"
+        .col-sm-10
+          = Talon.Form.input_builder a, :username, class: "form-control", place_holder: "username"
+          = error_tag f, :username
+    
+      .form-group
+        = label f, :email, class: "col-sm-2 control-label"
+        .col-sm-10
+          = Talon.Form.input_builder a, :email, class: "form-control", place_holder: "email"
+          = error_tag f, :email
+    
+      .form-group
+        = label f, :active, class: "col-sm-2 control-label"
+        .col-sm-10
+          = Talon.Form.input_builder a, :active, class: "form-control", place_holder: "active"
+          = error_tag f, :active
+    
+    .box-footer
+      = submit "Submit", class: "btn btn-primary"

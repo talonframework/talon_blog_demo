@@ -1,20 +1,27 @@
 # TalonBlogDemo
 
-To start your Phoenix server:
+A Blog project using the [Talon](https://github.com/talonframework/talon) Framework.
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Install Node.js dependencies with `cd assets && npm install`
-  * Start Phoenix endpoint with `mix phx.server`
+## Installation
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+```bash
+git clone https://github.com/talonframework/talon_blog_demo.git
+cd talon_blog_demo
+mix deps.get && npm install && mix ecto.setup && mix phx.server
+```
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+Visit `http://localhost:4000/talon/blogs` in your browser.
 
-## Learn more
+## Steps Taken to Create this Project
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+1. `mix phx.new talon_blog_demo`
+2. `cd talon_blog_demo`
+3. `mix ecto.create`
+4. `mix phx.gen.context Accounts User users first_name last_name username email active:boolean`
+5. `mix phx.gen.context Blogs Blog blogs name description:text active:boolean user_id:references:accounts_users`
+6. `mix phx.gen.context Blogs Post posts title body:text published:boolean views:integer blog_id:references:blogs_blog`
+7. `mix run priv/repo/seeds.exs`
+8. `mix talon.new`
+9. `mix talon.gen.resource Accounts.User`
+10. `mix talon.gen.resource Blogs.Blog`
+11. `mix talon.gen.resource Blogs.Post`
