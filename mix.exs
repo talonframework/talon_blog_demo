@@ -17,7 +17,7 @@ defmodule TalonBlogDemo.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {TalonBlogDemo.Application, []},
-     extra_applications: [:logger, :runtime_tools]]
+     extra_applications: [:logger, :runtime_tools, :faker_elixir_octopus, :talon]]
   end
 
   # Specifies which paths to compile per environment.
@@ -35,6 +35,8 @@ defmodule TalonBlogDemo.Mixfile do
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
+     {:talon, github: "talonframework/talon"},
+     {:faker_elixir_octopus, "~> 0.12.0", only: [:dev, :test]},
      {:cowboy, "~> 1.0"}]
   end
 
