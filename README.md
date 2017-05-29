@@ -24,12 +24,14 @@ Visit `http://localhost:4000/talon/blogs` in your browser.
   * Add the `belongs_to` and `has_many` to the `Post` and `Blog` schemas
 7. Fill out the `seeds.exs` file
 8. `mix run priv/repo/seeds.exs`
-9. `mix talon.new`
-10. Follow the instructions printed
+9. Edit the `mix.exs` file. Add `talon` and `faker` deps
+10. `mix deps.get`
+11. `mix talon.new`
+12. Follow the instructions printed
   * Add the pagination to `repo.ex`
   * Add the talon routes to `router.ex`
   * Edited the `brunch-config.js` file. Copied the boilerplate sections, pasted, and uncommented.
-11. `mix talon.gen.resource Accounts.User`
-12. `mix talon.gen.resource Blogs.Blog`
-13. `mix talon.gen.resource Blogs.Post`
-14. Edit the `config/talon.exs` file and add the resources per instructions
+13. `mix talon.gen.resource Accounts.User`
+14. `mix talon.gen.resource Blogs.Blog`
+15. `mix talon.gen.resource Blogs.Post`
+16. Edit the `config/talon.exs` file and add the resources per instructions
