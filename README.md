@@ -7,7 +7,7 @@ A Blog project using the [Talon](https://github.com/talonframework/talon) Framew
 ```bash
 git clone https://github.com/talonframework/talon_blog_demo.git
 cd talon_blog_demo
-mix deps.get && npm install && mix ecto.setup && mix phx.server
+mix deps.get && cd assets && npm install && cd .. && mix ecto.setup && mix phx.server
 ```
 
 Visit `http://localhost:4000/talon/blogs` in your browser.
