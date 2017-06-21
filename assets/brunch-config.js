@@ -4,16 +4,16 @@ exports.config = {
     javascripts: {
       joinTo: {
         'js/app.js': /^(js)|(node_modules)/,
-        'js/talon/admin_lte/jquery-2.2.3.min.js': 'vendor/talon/admin-lte/plugins/jQuery/jquery-2.2.3.min.js',
-        'js/talon/admin_lte/bootstrap.min.js': 'vendor/talon/admin-lte/bootstrap/js/bootstrap.min.js',
-        'js/talon/admin_lte/app.min.js': 'vendor/talon/admin-lte/dist/js/app.min.js',
-        'js/talon/admin_lte/sweetalert.min.js': 'vendor/talon/admin-lte/plugins/sweetalert/dist/sweetalert.min.js'
+        'js/talon/admin-lte/jquery-2.2.3.min.js': 'vendor/talon/admin-lte/plugins/jQuery/jquery-2.2.3.min.js',
+        'js/talon/admin-lte/bootstrap.min.js': 'vendor/talon/admin-lte/bootstrap/js/bootstrap.min.js',
+        'js/talon/admin-lte/app.min.js': 'vendor/talon/admin-lte/dist/js/app.min.js',
+        'js/talon/admin-lte/sweetalert.min.js': 'vendor/talon/admin-lte/plugins/sweetalert/dist/sweetalert.min.js'
       }
     },
     stylesheets: {
       joinTo: {
         'css/app.css': /^(css)/,
-        'css/talon/admin_lte/talon.css': [
+        'css/talon/admin-lte/talon.css': [
           'css/talon/admin-lte/talon.css',
           'vendor/talon/admin-lte/dist/css/skins/all-skins.css',
           'vendor/talon/admin-lte/bootstrap/css/bootstrap.min.css',
@@ -60,3 +60,4 @@ exports.config = {
     enabled: true
   }
 };
+

@@ -15,9 +15,9 @@ defmodule TalonBlogDemo.Web.Router do
   end
 
   # your app's routes
-  scope "/talon", TalonBlogDemo.Web do
+  scope "/admin", TalonBlogDemo.Web do
     pipe_through :browser
-    talon_routes()
+    talon_routes(TalonBlogDemo.Admin)
   end
 
   scope "/", TalonBlogDemo.Web do

@@ -3,7 +3,7 @@ defmodule TalonBlogDemo.Mixfile do
 
   def project do
     [app: :talon_blog_demo,
-     version: "0.0.1",
+     version: "0.1.0",
      elixir: "~> 1.4",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:talon, :phoenix, :gettext] ++ Mix.compilers,
@@ -35,8 +35,8 @@ defmodule TalonBlogDemo.Mixfile do
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
-     # {:talon, github: "talonframework/talon"},
-      # {:talon, path: "../talon"},
+     {:talon, github: "talonframework/talon"},
+      # {:talon, path: "../talon2"},
      {:faker_elixir_octopus, "~> 0.12.0", only: [:dev, :test]},
      {:cowboy, "~> 1.0"}]
   end
