@@ -5,8 +5,9 @@ defmodule TalonBlogDemo.Admin.Blogs.Blog do
 
   TBD
   """
+  use TalonBlogDemo.Talon.Web, which: :resource
   use Talon.Resource, schema: TalonBlogDemo.Blogs.Blog, concern: TalonBlogDemo.Admin
-  
+
   # The above is all that is required to use Talon with defaults
   # If you would like to customize some of the features, wee the
   # commented boilerplate below
@@ -43,5 +44,5 @@ defmodule TalonBlogDemo.Admin.Blogs.Blog do
   #   # handle redering for the remaining fields
   #   super(page, field)
   # end
-  
+
 end

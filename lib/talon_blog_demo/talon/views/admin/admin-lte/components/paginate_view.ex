@@ -1,7 +1,7 @@
 defmodule TalonBlogDemo.Admin.AdminLte.Web.PaginateView do
   use TalonBlogDemo.Talon.Web, which: :component_view, theme: "admin/admin-lte", module: TalonBlogDemo.Admin.AdminLte.Web
 
-  import Talon.Components.Paginate
+  use Talon.Components.Paginate
   import Talon.Utils, only: [to_integer: 1]
 
   def paginate(%{params: params} = conn) do

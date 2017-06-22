@@ -22,4 +22,5 @@ defmodule TalonBlogDemo.Web.Talon.Messages do
   # Messages
 
   def are_you_sure_you_want_to_delete_this?, do: dgettext(@domain, "Are you sure you want to delete this?")
+  def not_loaded, do: dgettext(@domain, "Not Loaded")
 end

@@ -5,6 +5,7 @@ defmodule TalonBlogDemo.Admin.Accounts.User do
 
   TBD
   """
+  use TalonBlogDemo.Talon.Web, which: :resource
   use Talon.Resource, schema: TalonBlogDemo.Accounts.User, concern: TalonBlogDemo.Admin
 
   def display_name(user) do

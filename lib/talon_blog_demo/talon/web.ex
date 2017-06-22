@@ -28,6 +28,15 @@ defmodule TalonBlogDemo.Talon.Web do
     end
   end
 
+  def resource(_) do
+    quote do
+      import TalonBlogDemo.Web.Gettext
+
+      require TalonBlogDemo.Web.Gettext
+      require Ecto.Query
+    end
+  end
+
   def controller(_) do
     quote do
       use Phoenix.Controller

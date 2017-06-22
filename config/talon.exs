@@ -2,7 +2,6 @@ use Mix.Config
 
 config :talon_blog_demo, :talon,
   module: TalonBlogDemo,
-  messages_backend: TalonBlogDemo.Web.Gettext,
   themes: ["admin-lte"],
   concerns: [TalonBlogDemo.Admin],
 
@@ -21,5 +20,6 @@ config :talon_blog_demo, TalonBlogDemo.Admin,
   repo: TalonBlogDemo.Repo,
   router: TalonBlogDemo.Web.Router,
   endpoint: TalonBlogDemo.Web.Endpoint,
-  schema_adapter: Talon.Schema.Adapters.Ecto
+  schema_adapter: Talon.Schema.Adapters.Ecto,
+  messages_backend: TalonBlogDemo.Talon.Web.Messages
 
