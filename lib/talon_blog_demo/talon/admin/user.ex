@@ -6,7 +6,10 @@ defmodule TalonBlogDemo.Admin.Accounts.User do
   TBD
   """
   use Talon.Resource, schema: TalonBlogDemo.Accounts.User, concern: TalonBlogDemo.Admin
-  
+
+  def display_name(user) do
+    user.username
+  end
   # The above is all that is required to use Talon with defaults
   # If you would like to customize some of the features, wee the
   # commented boilerplate below
@@ -43,5 +46,5 @@ defmodule TalonBlogDemo.Admin.Accounts.User do
   #   # handle redering for the remaining fields
   #   super(page, field)
   # end
-  
+
 end
