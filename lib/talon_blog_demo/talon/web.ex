@@ -30,10 +30,9 @@ defmodule TalonBlogDemo.Talon.Web do
 
   def resource(_) do
     quote do
+      import Ecto.Query
       import TalonBlogDemo.Web.Gettext
-
       require TalonBlogDemo.Web.Gettext
-      require Ecto.Query
     end
   end
 

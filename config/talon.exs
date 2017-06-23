@@ -12,7 +12,10 @@ config :talon_blog_demo, TalonBlogDemo.Admin,
   resources: [
     TalonBlogDemo.Admin.Accounts.User,
     TalonBlogDemo.Admin.Blogs.Blog,
-    TalonBlogDemo.Admin.Blogs.Post
+    TalonBlogDemo.Admin.Blogs.Post,
+  ],
+  pages: [
+    TalonBlogDemo.Admin.Dashboard
   ],
   theme: "admin-lte",
   root_path: "lib/talon_blog_demo/talon",
@@ -21,5 +24,6 @@ config :talon_blog_demo, TalonBlogDemo.Admin,
   router: TalonBlogDemo.Web.Router,
   endpoint: TalonBlogDemo.Web.Endpoint,
   schema_adapter: Talon.Schema.Adapters.Ecto,
-  messages_backend: TalonBlogDemo.Talon.Web.Messages
+  messages_backend: TalonBlogDemo.Talon.Messages
+
 
