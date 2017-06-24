@@ -15,7 +15,8 @@ config :talon_blog_demo, TalonBlogDemo.Admin,
     TalonBlogDemo.Admin.Blogs.Post,
   ],
   pages: [
-    TalonBlogDemo.Admin.Dashboard
+    TalonBlogDemo.Admin.Dashboard,
+    TalonBlogDemo.Admin.Page
   ],
   theme: "admin-lte",
   root_path: "lib/talon_blog_demo/talon",

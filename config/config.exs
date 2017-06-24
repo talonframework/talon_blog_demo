@@ -31,6 +31,7 @@ config :talon_blog_demo, :generators,
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
 
+
 config :phoenix, :template_engines,
   slim: PhoenixSlime.Engine,
   slime: PhoenixSlime.Engine
